@@ -1,8 +1,10 @@
+"use client"
 import * as React from 'react';
 import RouterLink from 'next/link';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import styled from '@emotion/styled';
 
 import { paths } from '@/paths';
 import { DynamicLogo } from '@/components/core/logo';
@@ -10,6 +12,18 @@ import { DynamicLogo } from '@/components/core/logo';
 export interface LayoutProps {
   children: React.ReactNode;
 }
+const LogoStyle = styled(Typography)`
+     font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #2c3e50;
+    background: linear-gradient(90deg, #001f3f, #0074d9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+`;
 
 export function Layout({ children }: LayoutProps): React.JSX.Element {
   return (
@@ -24,7 +38,7 @@ export function Layout({ children }: LayoutProps): React.JSX.Element {
       <Box sx={{ display: 'flex', flex: '1 1 auto', flexDirection: 'column' }}>
         <Box sx={{ p: 3 }}>
           <Box component={RouterLink} href={paths.home} sx={{ display: 'inline-block', fontSize: 0 }}>
-            <DynamicLogo colorDark="light" colorLight="dark" height={32} width={122} />
+          <LogoStyle>10TIYAAB</LogoStyle>
           </Box>
         </Box>
         <Box sx={{ alignItems: 'center', display: 'flex', flex: '1 1 auto', justifyContent: 'center', p: 3 }}>
@@ -46,21 +60,13 @@ export function Layout({ children }: LayoutProps): React.JSX.Element {
             <Typography color="inherit" sx={{ fontSize: '24px', lineHeight: '32px', textAlign: 'center' }} variant="h1">
               Welcome to{' '}
               <Box component="span" sx={{ color: '#15b79e' }}>
-                Devias Kit
+                10TIYAAB
               </Box>
             </Typography>
             <Typography align="center" variant="subtitle1">
-              A professional template that comes with ready-to-use MUI components.
+              A Application which help daily vagers to connect with customers
             </Typography>
           </Stack>
-          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-            <Box
-              component="img"
-              alt="Widgets"
-              src="/assets/auth-widgets.png"
-              sx={{ height: 'auto', width: '100%', maxWidth: '600px' }}
-            />
-          </Box>
         </Stack>
       </Box>
     </Box>

@@ -29,7 +29,7 @@ const schema = zod.object({
 
 type Values = zod.infer<typeof schema>;
 
-const defaultValues = { email: 'sofia@devias.io', password: 'Secret1' } satisfies Values;
+const defaultValues = { email: 'syedshoaib@gmail.com', password: 'shoaib1234' } satisfies Values;
 
 export function SignInForm(): React.JSX.Element {
   const router = useRouter();
@@ -138,14 +138,14 @@ export function SignInForm(): React.JSX.Element {
           </Button>
         </Stack>
       </form>
-      <Alert color="warning">
+      <Alert color="linear-gradient(90deg, #001f3f, #0074d9)">
         Use{' '}
         <Typography component="span" sx={{ fontWeight: 700 }} variant="inherit">
-          sofia@devias.io
+          syedshoaib@gmail.com
         </Typography>{' '}
         with password{' '}
         <Typography component="span" sx={{ fontWeight: 700 }} variant="inherit">
-          Secret1
+          shoaib1234
         </Typography>
       </Alert>
     </Stack>
